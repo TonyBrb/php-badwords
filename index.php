@@ -1,6 +1,6 @@
 <?php
 $paragrafo = 'Ciao come stai?';
-$paragrafoModificato = str_replace($_GET, '***', $paragrafo);
+$paragrafoModificato = str_replace($_GET['parola'], '***', $paragrafo);
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ $paragrafoModificato = str_replace($_GET, '***', $paragrafo);
 
   <h2>Lunghezza: <?php echo strlen($paragrafo); ?></h2>
 
-  <h2>Paragrafo modificato: <?php echo str_replace($_GET, '***', $paragrafo) ?></h2>
+  <h2>Paragrafo modificato: <?php echo str_replace($_GET['parola'], '***', $paragrafo) ?></h2>
   <h2>Lunghezza paragrafo modificato: <?php echo strlen($paragrafoModificato); ?></h2>
 </body>
 
